@@ -1,13 +1,13 @@
 
-# Project Title  
+# Title of the Project  
 
-![License Badge](https://img.shields.io/badge/License-General_Public_License_v3.0-blue)
+![License Badge](https://img.shields.io/badge/License-Apache_2.0-blue)
 
 
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)  
-- [Usage](#usage)  
+- [Tests](#tests)  
 - [License](#license)  
 - [Questions](#questions)  
   
@@ -15,31 +15,25 @@
 
 ## Description  
 
-This is the description of the project  
+Description of the project  
 
 
 ## Installation  
     
-  These are the instructions to install the Application
-- Step 1
-- Step 2
-- Step 3
+  Instuctions for the Application
 
-
-## Usage  
+## Tests  
     
-  This is the User Guide for the Application
-
+  Application tests
 
   
-
 
 
 ## License  
 
 The content of this site is subject to the terms and conditions of undefined license.  
 For detailed Information, click on the following Link  
-https://choosealicense.com/licenses/gpl-3.0/
+https://choosealicense.com/licenses/apache-2.0/
   
 
 

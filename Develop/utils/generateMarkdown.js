@@ -88,7 +88,6 @@ sectionsList +=
     
   ${data[element]}
 
-
 `
 //------------------------------------------
     });
@@ -112,7 +111,6 @@ ${data.description}
 
 
 ${sectionsContent}  
-
 
 ${licenseText}  
 
