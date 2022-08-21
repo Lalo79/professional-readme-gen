@@ -21,17 +21,17 @@ Professional README Dynamic Generator is an application that guides a user throu
 ![Inquirer general info](./Develop/utils/images/inquirer-general-info.png)
 
 -	License: The user needs to specify if the README that is building for the application is covered under a license. 
-( ) Apache 2.0
-( ) General Public License v3.0
-( ) MIT
-( ) ISC
+  - ( ) Apache 2.0
+  - ( ) General Public License v3.0
+  - ( ) MIT
+  - ( ) ISC
 ![Inquirer License Selection](./Develop/utils/images/inquirer-select-license.png)
 
 -	Sections to include: User needs to specify the sections to be included in the README
-( ) Installation
-( ) Usage
-( ) Contribution Process
-( ) Tests
+  - ( ) Installation
+  - ( ) Usage
+  - ( ) Contribution Process
+  - ( ) Tests
 For each of the sections selected by the user, he/she will be requested to describe the content. The default editor will open up so the user add the desired information. Once finished, the user only has to close the editor and select to SAVE changes when prompted.
 
 ![Inquirer Sections Content Description](./Develop/utils/images/inquirer-section-description.png)
