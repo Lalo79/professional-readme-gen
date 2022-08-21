@@ -34,12 +34,12 @@ function renderLicenseSection(license) {
 
   if (license != 'None') {
     return `
-  ## License  
-  
-  The content of this site is subject to the terms and conditions of ${license.license} license.  
-  For detailed Information, click on teh following URL  
-  ${licenseLink}
-  `
+## License  
+
+The content of this site is subject to the terms and conditions of ${license.license} license.  
+For detailed Information, click on the following Link  
+${licenseLink}
+`
     
   } else {
     return ``
@@ -60,56 +60,68 @@ function generateMarkdown(data) {
     
     // forEach populates the sections that user selected in the Table of Contents
     data.sections.forEach(element => {
+      compundElement = element.replace(/ /g,"-").toLowerCase(),
   // ---------------------------------------
-      sectionsList += `  
-  - ${element}`
+      sectionsList += 
+`- [${element}](#${compundElement})  
+`
   // ---------------------------------------
     });
+
+    if(licenseText != ``) {
+      sectionsList += 
+`- [License](#license)  
+`   }
+
+sectionsList += 
+`- [Questions](#questions)  
+`
 
     // forEach Creates the sections that user selected and includes the text of each section
     const sectionsArray = data.sections;
     
     sectionsArray.forEach(element => {
-      console.log('xxxx', element)
   // ---------------------------------------- 
-      sectionsContent += `
-  
-  ## ${element}  
-  
+      sectionsContent += 
+`## ${element}  
+    
   ${data[element]}
 
-  `
+
+`
   //------------------------------------------
     });
   }
   
 
   return `
-  # ${data.title}  
+# ${data.title}  
 
-  ${data.licenseBadge}
-
-
-  ## Table of Contents  
-  - Description${sectionsList}  
-
-  
-  ## Descriprtion
-
-  ${data.description}
+${data.licenseBadge}
 
 
-  ${sectionsContent}  
+## Table of Contents
+- [Description](#description)
+${sectionsList}  
 
 
-  ${licenseText}  
+## Description  
+
+${data.description}  
 
 
-  ## Questions
-  Please refer to my GitHub profile for more information: https://github.com/${data.github}  
-  If you have questions, you can reach me via e-mail: ${data.mail}   
+${sectionsContent}  
 
-  `;
+
+${licenseText}  
+
+
+## Questions
+Please refer to my GitHub profile for more information: https://github.com/${data.github}  
+If you have questions, you can reach me via e-mail: ${data.mail}   
+
+`;
+
 }
 
 module.exports = {generateMarkdown, renderLicenseLink, renderLicenseBadge}
