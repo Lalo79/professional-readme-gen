@@ -81,7 +81,8 @@ sectionsList +=
     const sectionsArray = data.sections;
     
     sectionsArray.forEach(element => {
-  // ---------------------------------------- 
+      
+// ---------------------------------------- 
       sectionsContent += 
 `## ${element}  
     
@@ -89,7 +90,7 @@ sectionsList +=
 
 
 `
-  //------------------------------------------
+//------------------------------------------
     });
   }
   

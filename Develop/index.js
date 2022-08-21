@@ -1,8 +1,5 @@
 // TODO: Include packages needed for this application
-
-const path = 'C:/xampp/htdocs/Bootcamp/TDM-VIRT-FSF-PT-06-2022-U-LOLC/09-NodeJS/01-Activities/18-Stu_Package-npm/Unsolved/node_modules/inquirer'
-
-const inquirer = require(path);
+const inquirer = require('./node_modules/inquirer');
 const fs = require('fs');
 
 const textGen =  require('./utils/generateMarkdown.js');
