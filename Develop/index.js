@@ -44,6 +44,9 @@ const questions = [
         message: 'Please enter the description of your project'
   
       },
+      /* The following Questions depends of the output of questions.sections
+       If a section is selected, then the questionnaire will prompt for the description of such section
+      */
       {
         type: 'editor',
         name: 'Installation',
@@ -74,35 +77,23 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-
-    console.log(data);
-    
-
     fs.writeFile(fileName, data, (err) =>
     err ? console.log(err) : console.log('Successfully created README.MD!')
   );
-
 }
 
 // TODO: Create a function to initialize app
 function init() {
-
     inquirer.prompt(questions)
     .then((answers) => {       
 
       // console.log('readMetext', answers)
       const readMetext = textGen.generateMarkdown(answers);
-        
       writeToFile('README_PROF.md',readMetext)
-
     })
-
 }
 
 // Function call to initialize app
-
-
-
 init();
 
 
